@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mesmas variaveis do projeto Full-Net, com as cores de status do LED RGB */
+:root {
+    --bg-color: #FFF;
+    --text-color: #252B42;
+    --second-text-color: #737373;
+    --light-text-color: #FFF;
+    --light-gray: #F8F8F8;
+    --border-color: #E6E6E6;
+    --primary-color: #0000009a;
+    --secondary-color: #fd6b09;
+
+    --status-normal: #1E9E55;
+    --status-alerta: #D93025;
+    --status-desativado: #1A73E8;
+    --status-neutro: #9AA0A6;
+
+    --ff-sans: "Montserrat", system-ui, sans-serif;
+    --fw-base: 400;
+    --fw-md: 500;
+    --fw-bold: 800;
+
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.75rem;
+    --fs-2xl: 2.25rem;
+
+    --py-sm: 0.875rem;
+    --py-base: 1rem;
+    --py-lg: 1.5rem;
+    --py-xl: 3rem;
+    --px-lg: 1.5rem;
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    color: var(--text-color);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.04em;
+}
+
+h1 { font-size: var(--fs-xl); }
+h2 { font-size: var(--fs-lg); }
+h3 { font-size: var(--fs-base); }
+
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+code {
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 0.85em;
+}
+
+@media (width >= 1280px) {
+    :root {
+        --fs-xl: 2.25rem;
+        --py-lg: 2rem;
+    }
+}

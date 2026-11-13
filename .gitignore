@@ -1,0 +1,27 @@
+# Credenciais (nunca versionar)
+firmware/credenciais.h
+.env
+.env.local
+.env.*.local
+painel/.env
+
+# Dependencias e builds do painel
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editores e sistema
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Netlify
+.netlify/

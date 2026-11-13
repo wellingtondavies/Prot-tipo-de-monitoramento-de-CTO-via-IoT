@@ -1,0 +1,55 @@
+.painel-header {
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-color);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.marca strong {
+    display: block;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-lg);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.marca span {
+    color: var(--second-text-color);
+    font-size: var(--fs-sm);
+}
+
+.conexao {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-md);
+    color: var(--second-text-color);
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: var(--light-gray);
+}
+
+.conexao .ponto {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: var(--status-neutro);
+}
+
+.conexao-conectado .ponto { background: var(--status-normal); }
+.conexao-reconectando .ponto,
+.conexao-conectando .ponto { background: var(--secondary-color); }
+.conexao-desconectado .ponto { background: var(--status-alerta); }
+
+@media (width < 560px) {
+    .painel-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}

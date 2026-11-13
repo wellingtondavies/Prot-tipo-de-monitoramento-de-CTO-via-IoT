@@ -1,0 +1,4 @@
+# Wokwi Library List
+# Bibliotecas instaladas automaticamente pelo Wokwi na compilacao
+PubSubClient
+DHT sensor library for ESPx

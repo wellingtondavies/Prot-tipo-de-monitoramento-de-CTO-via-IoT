@@ -1,0 +1,73 @@
+.comandos,
+.eventos {
+    background: var(--light-gray);
+    border-radius: 6px;
+    padding: 1.25rem;
+    min-width: 0;
+}
+
+.comandos h2,
+.eventos h2 {
+    margin-bottom: 1rem;
+}
+
+.comandos-botoes {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.comandos-limite {
+    margin-bottom: 1rem;
+}
+
+.comandos-limite label {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-md);
+    margin-bottom: 0.35rem;
+}
+
+.comandos-limite label span {
+    color: var(--second-text-color);
+    font-weight: var(--fw-base);
+}
+
+.comandos-limite div {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+}
+
+.comandos-limite input {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.4rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.comandos-limite input:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 1px;
+}
+
+.comandos-limite .btn-primary {
+    width: auto;
+}
+
+.comandos-erro {
+    color: var(--status-alerta);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-md);
+}
+
+/* Botoes desabilitados (sem conexao) */
+.btn-primary:disabled,
+.btn-secondary:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+}

@@ -1,0 +1,75 @@
+.grafico {
+    background: var(--light-gray);
+    border-radius: 6px;
+    padding: 1.25rem;
+    min-width: 0;
+}
+
+.grafico-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.grafico-topo h3 {
+    color: var(--second-text-color);
+    font-weight: var(--fw-md);
+    letter-spacing: 0;
+}
+
+.grafico-topo strong {
+    font-weight: var(--fw-bold);
+    font-variant-numeric: tabular-nums;
+}
+
+.grafico svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grafico .grade {
+    stroke: var(--border-color);
+    stroke-width: 1;
+}
+
+.grafico .eixo {
+    fill: var(--second-text-color);
+    font-size: 15px;
+    font-family: var(--ff-sans);
+}
+
+.grafico .linha {
+    fill: none;
+    stroke: var(--secondary-color);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.grafico .ultimo {
+    fill: var(--secondary-color);
+    stroke: #FFF;
+    stroke-width: 2;
+}
+
+.grafico .limite {
+    stroke: var(--status-alerta);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 5;
+}
+
+.grafico .limite-texto {
+    fill: var(--status-alerta);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--ff-sans);
+}
+
+.grafico-vazio {
+    color: var(--second-text-color);
+    font-size: var(--fs-sm);
+    padding: 3rem 0;
+    text-align: center;
+}

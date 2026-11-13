@@ -1,0 +1,47 @@
+.eventos ul {
+    display: grid;
+    gap: 0.5rem;
+    max-height: 26rem;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.evento {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    background: var(--bg-color);
+    border-left: 4px solid var(--status-neutro);
+    border-radius: 4px;
+    padding: 0.6rem 0.8rem;
+}
+
+.evento time {
+    font-size: 0.8rem;
+    color: var(--second-text-color);
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.1rem;
+}
+
+.evento strong {
+    display: block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.evento p {
+    font-size: 0.8rem;
+    color: var(--second-text-color);
+    overflow-wrap: anywhere;
+}
+
+.evento-alerta { border-color: var(--status-alerta); }
+.evento-normalizado { border-color: var(--status-normal); }
+.evento-resposta-ok { border-color: var(--status-desativado); }
+.evento-resposta-erro { border-color: var(--status-alerta); background: #FDF0EF; }
+.evento-enviado { border-color: var(--secondary-color); }
+
+.eventos-vazio {
+    color: var(--second-text-color);
+    font-size: var(--fs-sm);
+}

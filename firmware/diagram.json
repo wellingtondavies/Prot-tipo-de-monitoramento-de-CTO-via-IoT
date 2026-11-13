@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "author": "Wellington Davies dos Santos, Bruno Henrique da Silva, Flavio Antonio Schneider",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -86.1,
+      "left": 210,
+      "attrs": { "temperature": "28.5", "humidity": "65" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 190,
+      "left": -170,
+      "attrs": { "color": "red", "label": "Tampa CTO" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -40,
+      "left": -250,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 60,
+      "left": -150,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 90,
+      "left": -150,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 120,
+      "left": -150,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+
+    [ "dht1:VCC", "esp:3V3", "red", [] ],
+    [ "dht1:GND", "esp:GND.1", "black", [] ],
+    [ "dht1:SDA", "esp:D15", "green", [] ],
+
+    [ "btn1:1.l", "esp:D13", "orange", [] ],
+    [ "btn1:2.l", "esp:GND.2", "black", [] ],
+
+    [ "esp:D25", "r1:2", "red", [] ],
+    [ "r1:1", "rgb1:R", "red", [] ],
+    [ "esp:D26", "r2:2", "green", [] ],
+    [ "r2:1", "rgb1:G", "green", [] ],
+    [ "esp:D27", "r3:2", "blue", [] ],
+    [ "r3:1", "rgb1:B", "blue", [] ],
+    [ "rgb1:COM", "esp:GND.2", "black", [] ]
+  ],
+  "dependencies": {}
+}
